@@ -63,6 +63,7 @@ output "database" {
 output "instance_private_key" {
   value       = var.vm_public_key == null ? tls_private_key.tfe_ssh[0].private_key_pem : "An existing 'vm_public_key' was provided"
   description = "The SSH private key to the TFE instance(s)"
+  sensitive = true
 }
 
 # Bastion
