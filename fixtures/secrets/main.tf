@@ -3,15 +3,15 @@
 
 # Store the Base64 Encoded TFE License as a Secret
 # ------------------------------------------------
-resource "azurerm_key_vault_secret" "tfe_license" {
-  count = var.tfe_license == null ? 0 : 1
+#resource "azurerm_key_vault_secret" "tfe_license" {
+#  count = var.tfe_license == null ? 0 : 1
 
-  name         = var.tfe_license.name
-  value        = filebase64(var.tfe_license.path)
-  key_vault_id = var.key_vault_id
+#  name         = var.tfe_license.name
+#  value        = filebase64(var.tfe_license.path)
+#  key_vault_id = var.key_vault_id
 
-  tags = var.tags
-}
+#  tags = var.tags
+#}
 
 # Store cert's chained cert and key as Secrets
 # --------------------------------------------
