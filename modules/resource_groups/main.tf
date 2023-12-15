@@ -15,7 +15,7 @@ locals {
 resource "azurerm_resource_group" "tfe_resource_group" {
   count = var.resource_group_name == null ? 1 : 0
 
-  name     = "${var.friendly_name_prefix}-rg"
+  name     = "tfe-azure"
   location = var.location
 
   tags = var.tags
