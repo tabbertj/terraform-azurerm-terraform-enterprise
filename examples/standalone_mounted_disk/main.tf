@@ -34,7 +34,7 @@ module "standalone_mounted_disk" {
 
   # Bootstrapping resources
   load_balancer_certificate   = data.azurerm_key_vault_certificate.load_balancer
-  tfe_license_secret_id       = module.secrets.tfe_license_secret_id
+  tfe_license_secret_id       = "https://jt-test1.vault.azure.net/secrets/licenseFile/01798fa66e344a98b85f59d2bd4531d2"
   tls_bootstrap_cert_pathname = "/var/lib/terraform-enterprise/certificate.pem"
   tls_bootstrap_key_pathname  = "/var/lib/terraform-enterprise/key.pem"
   vm_certificate_secret       = data.azurerm_key_vault_secret.vm_certificate
