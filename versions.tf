@@ -18,3 +18,6 @@ terraform {
   }
 }
 
+provider “azurerm” {
+feature {}
+}
