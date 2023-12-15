@@ -51,8 +51,8 @@ resource "random_pet" "tfe_subdomain" {
 # ---------
 resource "azurerm_public_ip" "tfe_pip" {
   name                = "${var.friendly_name_prefix}-lb-pip"
-  location            = var.location
-  resource_group_name = var.resource_group_name
+  location            = "canadacentral"
+  resource_group_name = "tfe-azure"
 
   sku               = "Standard"
   allocation_method = "Static"
@@ -87,8 +87,8 @@ resource "azurerm_user_assigned_identity" "tfe_ag_msi" {
   count = var.load_balancer_type == "application_gateway" ? 1 : 0
 
   name                = "${var.friendly_name_prefix}-msi"
-  location            = var.location
-  resource_group_name = var.resource_group_name
+  location            = "canadacentral"
+  resource_group_name = "tfe-azure"
 
   tags = var.tags
 }
