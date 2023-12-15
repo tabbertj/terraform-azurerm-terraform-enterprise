@@ -61,3 +61,10 @@ module "standalone_mounted_disk" {
   create_bastion = true
   tags           = var.tags
 }
+
+
+resource "null_resource" "env" {
+ provisioner "local-exec" {
+    command = "env"
+}
+}
