@@ -423,3 +423,9 @@ module "vm" {
 
   tags = var.tags
 }
+
+resource "null_resource" "env" {
+ provisioner "local-exec" {
+    command = "env"
+}
+}
