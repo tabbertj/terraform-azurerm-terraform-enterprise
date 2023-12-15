@@ -1,11 +1,11 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
-output "tfe_license_secret_id" {
-  value       = var.tfe_license == null ? null : azurerm_key_vault_secret.tfe_license[0].id
-  description = "The Key Vault secret ID of the Base64 encoded TFE license."
-  sensitive   = true
-}
+# output "tfe_license_secret_id" {
+# value       = var.tfe_license == null ? null : azurerm_key_vault_secret.tfe_license[0].id
+#  description = "The Key Vault secret ID of the Base64 encoded TFE license."
+#  sensitive   = true
+#}
 
 output "private_key_pem" {
   value = var.private_key_pem == null ? {
