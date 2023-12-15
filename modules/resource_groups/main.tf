@@ -12,11 +12,11 @@ locals {
   resource_group_name_dns = var.resource_group_name_dns == null ? local.resource_group_name : var.resource_group_name_dns
 }
 
-resource "azurerm_resource_group" "tfe_resource_group" {
-  count = var.resource_group_name == null ? 1 : 0
+#resource "azurerm_resource_group" "tfe_resource_group" {
+#  count = var.resource_group_name == null ? 1 : 0
 
-  name     = "${var.friendly_name_prefix}-rg"
-  location = var.location
+#  name     = "${var.friendly_name_prefix}-rg"
+#  location = var.location
 
-  tags = var.tags
-}
+#  tags = var.tags
+#}
